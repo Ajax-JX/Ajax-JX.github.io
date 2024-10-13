@@ -21,7 +21,7 @@ function menu_()
          if p[2]:find("%[%]") then
             way="Class_Search"
          else
-            way="LMSS"
+            way="LMss"
          end
          functions[#t]["function"]="\n\nlist="..way.."("..'"'..p[2]..'"'..","..p[3]..","..p[5]..")\nt={}\nfor i,v in pairs(list) do \n   gg.setValues({{address=v,flags="..p[5]..",value="..r[1].."}})\nend\n\ngg.toast(".."'"..p[1].."已执行".."'"..")"
       end
@@ -33,7 +33,7 @@ function menu_()
          if p[2]:find("%[%]") then
             way1="Class_Search"
          else
-            way1="LMSS"
+            way1="LMss"
          end
          functions[#t]["function"]="\n\nlist="..way1.."("..'"'..p[2]..'"'..","..p[3]..","..p[5]..")\nt={}\nfor i,v in pairs(list) do \n   example={address=v,flags=4,value=gg.getValues({{address=v,flags=4}})[1].value}\n   table.insert(t,example)\nend\ngg.loadResults(t)\ngg.toast(".."'"..p[1].."已执行".."'"..")"
       end
