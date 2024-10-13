@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div id="bg"></div>
+  <div id="modal" class="modal_text">
+    <img src="./img/avatar2.jpg" alt="avatar" class="modal__img" width="200" height="200">
+    <div class="modal__name">Shiinafan</div>
+    <div class="modal__intro">有钱终成眷属，没钱亲眼目睹</div>
+    <div class="modal_tech">
+      技术栈：HTML CSS JS jquery bootstrap axios Nodejs Vue React Astro nuxt.js threejs
+    </div>
+    <div class="button_group">
+      <a href="/" class="modal__button">进入主页</a>
+      <a href="/" class="modal__button github">Github</a>
+    </div>
+  </div>
+</body>
+
+<script src="./particle.js" color="0,0,0" opacity="1" zindex="-2" count="99"></script>
+
+</html>
