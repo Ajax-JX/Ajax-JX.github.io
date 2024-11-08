@@ -504,7 +504,6 @@ function build(addr,type)
                     if isFieldDump or isMethodDump then
                         Dump({parentPtr[i_]})
                     end
-                    print(string.rep("=", 30))
                     found = true
                     break
                 end
@@ -520,8 +519,8 @@ function Parsing_class(className,type,FieldName,MethodName)
    if className:find("%[%]") then
       return "不支持数组,请用Class_Search()函数"
    end
-   if FieldName ~="" and MethodName ~="" then return "Error" end
-   if FieldName ~= "" then
+   if FieldName ==("" or nil) and MethodName ==("" or nil) then return "Error" end
+   if FieldName ~= nil and MethodName == nil then
       local start=LMss(className,0x4,type)
       build(start[1],type)
       offset=menu_fields[FieldName]
@@ -531,7 +530,7 @@ function Parsing_class(className,type,FieldName,MethodName)
       end
       return addr
    end
-   if FieldName =="" and MethodName ~="" then
+   if MethodName ~= nil and FieldName == nil then
       lib=Il2cppModules()[1]
       local start=LMss(className,0x4,type)
       build(start[1],type)
